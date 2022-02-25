@@ -1,5 +1,5 @@
+// Migratory Birds
 function migratoryBirds(arr) {
-    //Migratory Birds
     let count = 0;
     let answer = 0;
     arr.sort((a, b) => a - b);
