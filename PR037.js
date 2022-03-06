@@ -1,3 +1,4 @@
+// 문자열 압축
 function solution(s) {
     if (s.length === 1) {
         return 1;
