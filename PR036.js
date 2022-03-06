@@ -1,3 +1,4 @@
+// 오픈채팅방
 function solution(record) {
     let answer = [];
     let answers = [];
