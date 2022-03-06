@@ -26,3 +26,31 @@ function solution(record) {
     }
     return answers;
 }
+
+function solution(record) {
+    let users = {};
+    let answers = [];
+    let tmp = [];
+    for (let i = 0; i < record.length; i++) {
+        let splited = record[i].split(" ");
+        let action = splited[0];
+        let uid = splited[1];
+        let nickname = splited[2];
+        // enter
+        if (action === "Enter" || action === "Change") {
+            users[uid] = nickname;
+        }
+    }
+    for (let i = 0; i < record.length; i++) {
+        let splited = record[i].split(" ");
+        let action = splited[0];
+        let uid = splited[1];
+        if (action === "Enter") {
+            answers.push(users[uid] + "님이 들어왔습니다.");
+        }
+        if (action === "Leave") {
+            answers.push(users[uid] + "님이 나갔습니다.");
+        }
+    }
+    return answers;
+}
