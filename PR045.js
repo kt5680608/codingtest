@@ -7,19 +7,13 @@ function solution(n) {
     while (true) {
         sum += value;
         value++;
-        if (sum === n) {
-            answer++;
-            sum = 0;
-            flag++;
-            value = flag;
-        } else if (sum > n || value > n) {
+        if (sum >= n || value >= n) {
+            if (sum === n) answer++;
             sum = 0;
             flag++;
             value = flag;
         }
-        if (flag > n) {
-            break;
-        }
+        if (flag > n) break;
     }
     return answer;
 }
