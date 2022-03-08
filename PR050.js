@@ -19,7 +19,6 @@ function solution(s) {
         if (checkEng.test(s[i]) === true) {
             finder.push(s[i]);
             let string = finder.join("");
-            console.log(string);
             if (alphabet.indexOf(string) !== -1) {
                 answer.push(alphabet.indexOf(string));
                 finder = [];
